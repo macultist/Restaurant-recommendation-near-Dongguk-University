@@ -1,0 +1,49 @@
+<!DOCTYPE html> <!-- 이 문서가 HTML5 문서라고 브라우저에게 알려 줌 -->
+<html lang="ko"> <!-- HTML 문서 시작. lang="ko": 이 문서의 언어는 한국어 -->
+<head> 
+    <meta charset="UTF-8"> <!-- 글자 인코딩을 UTF-8로 지정 - 한글이 깨지지 않게 함 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 휴대폰에서도 화면 폭에 맞게 보이도록 -->
+    <title>동끼리: 점심 메뉴 추천 - 공통(수원 JS + 수영 CSS)</title> <!-- 브라우저 탭에 보이는 제목 -->
+    <!-- 7회차 공통 프로젝트 준비용 합본: HTML은 이 파일. JS는 수원 JS.js, CSS는 수영이 CSS.css 파일을 외부 연결해서 씀 -->
+    <link rel="stylesheet" href="수영 CSS.css"> <!-- link: 외부 CSS 파일 연결. href: 연결할 파일 이름 --> 
+</head> 
+
+<body> 
+    <h1>🐘 동끼리: 동국대 점심 메뉴 추천 🍱</h1>
+    <h3>오늘은 뭘 먹을지 더 이상 고민하지 마세요!</h3> 
+
+    <!-- 1단계: 음식 종류 고르기 -->
+    <form> <!-- form: 입력 항목(선택창, 버튼)을 묶는 양식 -->
+        <fieldset> <!-- fieldset: 폼 안의 입력 항목들을 테두리로 묶는 태그 -->
+            <legend><strong>1단계: 음식 종류 고르기</strong></legend> <!-- legend: fieldset 테두리 위에 붙는 제목 -->
+            <label for="category"><b>음식 종류를 선택하세요:</b></label> <!-- label: 선택창 옆 안내 글자. for="category"로 id가 category인 선택창과 짝지음 -->
+            <!-- onchange: 선택창에서 다른 항목을 '고르는 순간(ex. "골라 주세요" => "중식" 클릭)' chooseCategory 함수를 실행함 (onclick의 친구) -->
+            <select id="category" name="category" onchange="chooseCategory()"> <!-- select: 드롭다운 선택창. id="category"로 JS가 찾아옴 -->
+                <option value="">-- 골라 주세요 --</option> <!-- 아무것도 안 고른 상태 -->
+                <!-- 한식,중식,일식,양식,기타 option은 자바스크립트의 categories 배열을 보고 for문이 자동으로 채워 넣음 -->
+            </select> 
+
+            <br><br> 
+
+            <p>너무 맛있는 게 많아 종류도 못 고르겠다면
+               <span class="accent">랜덤 추첨</span> 버튼을 눌러 보세요!</p> <!-- span만 accent 스타일(주황·굵게, 수영 CSS) 적용. -->
+            <!-- type="button": form 안에서 눌러도 페이지가 새로고침되지 않게 함 (submit이면 새로고침됨) -->
+            <button type="button" onclick="randomCategory()">랜덤 추첨</button> <!-- 누르면 randomCategory 함수 실행 -->
+        </fieldset> 
+    </form> 
+
+    <!-- 2단계 결과가 나오는 곳 -->
+    <div id="container"> <!-- div는 여러 요소를 하나로 묶는 태그. 결과 영역(수영이 CSS의 #container: 흰 상자) -->
+        <h3>고른 종류: <span id="chosen" class="accent">아직 안 고름</span></h3> <!-- id="chosen" 칸에 JS가 고른 종류를 써 넣음 -->
+        <h3>내 예산: <span id="budget-text" class="accent">아직 입력 안 함</span></h3> <!-- id="budget-text" 칸에 JS가 입력한 예산을 써 넣음 -->
+        <!-- 처음엔 안내 문구만 넣어 두고, 나중에 JS가 이 안을 추천 결과로 바꿔 넣음 -->
+        <div id="result">음식 종류를 고르면 예산에 맞는 식당이 여기에 나와요!</div> <!-- 처음에 보이는 안내 문구. 결과가 나오면 바뀜 -->
+    </div> 
+
+    <h4>즐거운 식사 시간 되세요! (가격은 바뀔 수 있으니 방문 전에 꼭 확인!)</h4> 
+
+    <!-- 자바스크립트는 이 파일 안에 쓰지 않고, 같은 폴더의 수원 JS 파일을 불러와서 씀.
+     바디 닫는 태그 바로 위에 두어야 위쪽 HTML 요소(선택창, 결과 상자)를 다 읽은 뒤 실행됨 -->
+    <script src="수원 JS.js"></script> <!-- script src: 외부 JS 파일 연결. src: 불러올 파일 이름 -->
+</body> 
+</html>
