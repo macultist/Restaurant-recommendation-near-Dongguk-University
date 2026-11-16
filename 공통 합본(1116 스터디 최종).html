@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 휴대폰에서도 화면 폭에 맞게 보이도록 -->
     <title>동끼리: 점심 메뉴 추천 - 공통(수원 JS + 수영 CSS)</title> <!-- 브라우저 탭에 보이는 제목 -->
     <!-- 7회차 공통 프로젝트 준비용 합본: HTML은 이 파일. JS는 수원 JS.js, CSS는 수영이 CSS.css 파일을 외부 연결해서 씀 -->
-    <link rel="stylesheet" href="수원 수영 합본.css"> <!-- link: 외부 CSS 파일 연결. href: 연결할 파일 이름 --> 
+    <link rel="stylesheet" href="1116 스터디 최종.css"> <!-- link: 외부 CSS 파일 연결. href: 연결할 파일 이름 --> 
 </head> 
 
 <body> 
@@ -43,13 +43,14 @@
     <!-- 학교 식당 식단표 바로가기: 버튼을 누르면 학교 공식 식단표 페이지가 새 탭으로 열림 -->
     <!-- a 태그(링크) 대신 button 태그를 써서, 수영 CSS의 button 규칙(주황 배경, 흰 글자)이 랜덤 추첨 버튼과 똑같이 적용됨 -->
     <!-- window.open('주소'): 괄호 안의 주소를 새 탭으로 여는 명령. 바깥이 큰따옴표라서 안쪽 주소는 작은따옴표로 감쌈 -->
-    <button type="button" onclick="window.open('https://dorm.dongguk.edu/article/food/list')">기숙사 식당 식단표</button> <!-- 남산학사 홈페이지의 주간식단표 게시판 -->
-    <button type="button" onclick="window.open('https://www.dongguk.edu/article/FOODDFLEX/list')">경영관 D-Flex 식단표</button> <!-- 동국대 홈페이지의 오늘의 메뉴(D-Flex) 게시판 -->
+    <button type="button" onclick="window.open('https://dgucoop.dongguk.edu:44649/store/store.php?w=4&l')">상록원</button> <!-- 상록원 홈페이지의 주간식단표 게시판 -->
+    <button type="button" onclick="window.open('https://dorm.dongguk.edu/article/food/list')">기숙사 식당</button> <!-- 남산학사 홈페이지의 주간식단표 게시판 -->
+    <button type="button" onclick="window.open('https://www.dongguk.edu/article/FOODDFLEX/list')">경영관 D-Flex</button> <!-- 동국대 홈페이지의 오늘의 메뉴(D-Flex) 게시판 -->
 
     <h4>즐거운 식사 시간 되세요! (가격은 바뀔 수 있으니 방문 전에 꼭 확인!)</h4> 
 
     <!-- 자바스크립트는 이 파일 안에 쓰지 않고, 같은 폴더의 수원 JS 파일을 불러와서 씀.
      바디 닫는 태그 바로 위에 두어야 위쪽 HTML 요소(선택창, 결과 상자)를 다 읽은 뒤 실행됨 -->
-    <script src="수원 JS.js"></script> <!-- script src: 외부 JS 파일 연결. src: 불러올 파일 이름 -->
+    <script src="1116 스터디 최종.js"></script> <!-- script src: 외부 JS 파일 연결. src: 불러올 파일 이름 -->
 </body> 
 </html>
